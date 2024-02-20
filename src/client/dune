@@ -1,0 +1,14 @@
+(melange.emit
+ (alias client)
+ (target app)
+ (libraries
+  melange
+  shared_js_demo
+  melange-json
+  reason-react
+  melange-webapi
+  melange-fetch
+  universal-portal.shared_js)
+ (preprocess
+  (pps reason-react-ppx melange.ppx server-reason-react.browser_ppx))
+ (module_systems commonjs))
